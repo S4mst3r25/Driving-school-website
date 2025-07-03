@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+  font-family: inherit;
+  overflow-x: hidden;
+}
+
+.tektur-bold {
+  font-family: "Tektur", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: bold;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.page-bg {
+  width: 100vw;
+  height: 100vh;
+  min-height: 350px;
+  background: url('./assets/background.jpg') center/cover no-repeat;
+  position: relative;
+  z-index: 0;
+}
+
+.page-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.page-bg > * {
+  position: relative;
+  z-index: 2;
+}
+
+.sticky-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.hero-center-text {
+  position: absolute;
+  top: 38%; /* slightly above center */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  z-index: 2;
+}
+
+.hero-center-text h1 {
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.25);
+}
+
+.hero-center-text p {
+  font-size: 1.25rem;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
