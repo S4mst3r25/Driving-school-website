@@ -1,9 +1,11 @@
 import Logo from './assets/logo.png'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import './App.css'
 import { useEffect, useRef, useState, lazy, Suspense } from 'react'
+import { Phone } from 'lucide-react'
 
 const Courses = lazy(() => import('./Courses'))
+const Contacts = lazy(() => import('./Contacts'))
 
 const SECTIONS = [
   {
@@ -49,6 +51,22 @@ const SECTIONS = [
           style={{ height: '100%' }}
         >
           <Courses />
+        </motion.div>
+      </Suspense>
+    ),
+  },
+  {
+    key: 'contacts',
+    content: (
+      <Suspense>
+        <motion.div className="tektur-normal"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.5 }}
+          style={{ height: '100%' }}
+        >
+          <Contacts />
         </motion.div>
       </Suspense>
     ),
@@ -106,10 +124,23 @@ function App() {
   return (
     <div style={{ height: '100vh', width: '100vw', overflow: 'hidden' }}>
       <div ref={navbarRef} className="sticky-navbar px-4 py-6 w-full drop-shadow-md bg-white" style={{ position: 'sticky', top: 0, zIndex: 10 }}>
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center relative">
           <div className="flex items-center space-x-3">
             <img src={Logo} width={190} />
           </div>
+          <button
+            aria-label="Contact"
+            style={{ background: 'none', border: 'none', cursor: 'pointer', position: 'absolute', right: 16, top: '50%', transform: 'translateY(-50%)' }}
+            onClick={() => {
+              if (activeSection !== 2) {
+                setActiveSection(2)
+                setPendingSection(null)
+                setIsFadingOut(false)
+              }
+            }}
+          >
+            <Phone size={22} color="#222" />
+          </button>
         </div>
       </div>
       <div ref={containerRef} style={{ height: containerHeight, width: '100vw', overflow: 'hidden', position: 'relative' }}>
