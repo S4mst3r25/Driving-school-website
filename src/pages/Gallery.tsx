@@ -1,4 +1,5 @@
 import { useState } from "react";
+import FadeInImage from "../components/FadeInImage";
 
 const images = [
 	{
@@ -63,10 +64,12 @@ const Gallery = () => {
 						className={`relative overflow-hidden group ${img.gridClass}`}
 						onClick={() => openViewer(idx)}
 					>
-						<img
+						<FadeInImage
 							src={img.src}
 							className="object-cover w-full h-full select-none group-hover:cursor-pointer"
-							draggable="false"
+							style={{ display: 'block', width: '100%', height: '100%' }}
+							draggable={false}
+							alt=""
 						/>
 						<div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-40 transition-opacity duration-200 group-hover:cursor-pointer" />
 					</div>
@@ -98,6 +101,6 @@ const Gallery = () => {
 			)}
 		</div>
 	);
-};
+}
 
-export default Gallery;
+export default Gallery

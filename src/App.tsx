@@ -1,4 +1,5 @@
 import Logo from './assets/logo.png'
+import FadeInImage from './components/FadeInImage'
 import { motion } from 'framer-motion'
 import './App.css'
 import { useEffect, useRef, useState, lazy, Suspense } from 'react'
@@ -35,7 +36,7 @@ const SECTIONS = [
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.7 }}
           >
-            Научете се да шофирате с увереност в нашите коли BMW
+            Научете се да шофирате уверено с нашите коли BMW
           </motion.p>
         </div>
       </motion.div>
@@ -146,7 +147,7 @@ function App() {
         setActiveSection(pendingSection)
         setPendingSection(null)
         setIsFadingOut(false)
-      }, 1200)
+      }, 700)
       return () => clearTimeout(timeout)
     }
   }, [isFadingOut, pendingSection])
@@ -165,7 +166,7 @@ function App() {
                 setIsFadingOut(false)
               }}
             >
-              <img src={Logo} width={190} />
+              <FadeInImage src={Logo} alt="Logo" style={{ width: 190, height: 'auto' }} />
             </button>
           </div>
           <button
@@ -187,7 +188,7 @@ function App() {
           style={{ height: '100%', width: '100%', position: 'absolute', top: 0, left: 0, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}
           initial={{ opacity: 1 }}
           animate={{ opacity: isFadingOut ? 0 : 1 }}
-          transition={{ duration: 1.2 }}
+          transition={{ duration: 0.7 }}
         >
           {SECTIONS[activeSection].content}
           {activeSection === 0 && !isFadingOut && (

@@ -1,4 +1,5 @@
 import { useState, type ReactNode } from "react";
+import FadeInImage from "./FadeInImage";
 
 interface CategoryCardProps {
   title: string;
@@ -44,15 +45,13 @@ const CategoryCard = ({ title, img, desc, children }: CategoryCardProps) => {
                 <polygon points={imagePoints} />
               </clipPath>
             </defs>
-            <image
-              href={img}
-              x="0"
-              y="0"
-              width="400"
-              height="250"
-              preserveAspectRatio="xMidYMid slice"
-              clipPath="url(#imgcut)"
-            />
+            <foreignObject x="0" y="0" width="400" height="250" clipPath="url(#imgcut)">
+              <FadeInImage
+                src={img}
+                alt={title}
+                style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+              />
+            </foreignObject>
           </svg>
           <div className="h-[220px] mb-6" />
           <h2 className="text-2xl font-bold mb-3 text-center text-white">{title}</h2>

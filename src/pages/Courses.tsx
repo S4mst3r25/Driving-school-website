@@ -1,4 +1,5 @@
 import CategoryCard from "../components/CategoryCard"
+import { motion } from "framer-motion"
 
 const courses = [
 	{
@@ -112,9 +113,16 @@ const Courses = () => {
 			</h1>
 			<div className="flex flex-row gap-8 items-center justify-center mt-20">
 				{courses.map((course, idx) => (
-					<CategoryCard key={idx} title={course.title} img={course.img} desc={course.desc}>
-						{course.children}
-					</CategoryCard>
+					<motion.div
+						key={idx}
+						initial={{ opacity: 0, y: 30 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.5, delay: idx * 0.15 }}
+					>
+						<CategoryCard title={course.title} img={course.img} desc={course.desc}>
+							{course.children}
+						</CategoryCard>
+					</motion.div>
 				))}
 			</div>
 		</div>
