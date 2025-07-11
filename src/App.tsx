@@ -156,7 +156,17 @@ function App() {
       <div ref={navbarRef} className="sticky-navbar px-4 py-6 w-full drop-shadow-md bg-white" style={{ position: 'sticky', top: 0, zIndex: 10 }}>
         <div className="flex items-center justify-center relative">
           <div className="flex items-center space-x-3">
-            <img src={Logo} width={190} />
+            <button
+              aria-label="Go to Home"
+              style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer' }}
+              onClick={() => {
+                setActiveSection(0)
+                setPendingSection(null)
+                setIsFadingOut(false)
+              }}
+            >
+              <img src={Logo} width={190} />
+            </button>
           </div>
           <button
             aria-label="Contact"
