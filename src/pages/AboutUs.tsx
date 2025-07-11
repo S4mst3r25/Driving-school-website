@@ -4,7 +4,7 @@ const AboutUs = () => {
       <h1 className="text-5xl font-bold mb-6">За Нас</h1>
       <div className="flex flex-row w-full h-[70vh] space-x-20">
         <div className="w-full h-full">
-          <p className="text-lg">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea dicta blanditiis eius laboriosam ipsam illo at ipsa repellat laborum? Tempora, inventore voluptates dignissimos cupiditate unde sit, qui omnis saepe accusantium quam, suscipit explicabo commodi magni possimus quod veritatis porro molestias. Dicta doloribus maiores officia fugit nisi, quam excepturi, velit soluta hic perferendis ad alias corrupti suscipit, rem doloremque quaerat laudantium! Tempora, optio perferendis explicabo quo adipisci animi numquam nulla modi eligendi error ad veniam non tempore, sequi quas! Culpa, itaque? Accusantium amet repellendus nobis tempore. Quia corrupti ipsa ullam officia dolor, atque, officiis eligendi, sequi iste eum rem reprehenderit et.</p>
+          <p className="text-lg">УЧЕБЕН ЦЕНТЪР „Дани Драйв“ ЕООД е създаден през 2019 г., в следствие продължение на дългогодишния опит  като инструктор на ръководителя на учебния център Данаил Цветанов Димитров. Той е с 20 годишен опит в обучението и подготовката на кандидат водачи за управление на моторни превозни средства. Стремежът на екипа е да подготвят всички кандидат - водачи за съвестни шофьори, които умело да прилагат и спазват  Закона за движение по пътищата.</p>
         </div>
         <div className="flex flex-row max-w-[800px] space-x-6">
           <div className="p-4 border-4">
@@ -24,7 +24,7 @@ const AboutUs = () => {
         </div>
       </div>
     </div>
-      )
+  )
 }
 
 export default AboutUs

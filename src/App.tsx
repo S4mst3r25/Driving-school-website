@@ -3,11 +3,11 @@ import { motion } from 'framer-motion'
 import './App.css'
 import { useEffect, useRef, useState, lazy, Suspense } from 'react'
 import { Phone } from 'lucide-react'
-import Prices from './Gallery'
-import AboutUs from './AboutUs'
+import Prices from './pages/Gallery'
+import AboutUs from './pages/AboutUs'
 
-const Courses = lazy(() => import('./Courses'))
-const Contacts = lazy(() => import('./Contacts'))
+const Courses = lazy(() => import('./pages/Courses'))
+const Contacts = lazy(() => import('./pages/Contacts'))
 
 const SECTIONS = [
   {
@@ -162,11 +162,9 @@ function App() {
             aria-label="Contact"
             style={{ background: 'none', border: 'none', cursor: 'pointer', position: 'absolute', right: 16, top: '50%', transform: 'translateY(-50%)' }}
             onClick={() => {
-              if (activeSection !== 2) {
-                setActiveSection(4)
-                setPendingSection(null)
-                setIsFadingOut(false)
-              }
+              setActiveSection(4)
+              setPendingSection(null)
+              setIsFadingOut(false)
             }}
           >
             <Phone size={22} color="#222" />

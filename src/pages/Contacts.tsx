@@ -16,7 +16,7 @@ const Contacts = () => {
                     title="Google Map"
                 ></iframe>
             </div>
-            <div className="flex flex-row flex-wrap gap-6 mb-8 mt-8 items-center justify-center mt-16">
+            <div className="flex flex-row flex-wrap gap-6 mb-8 items-center justify-center mt-16">
                 <div className="flex items-center gap-2 text-lg">
                     <Mail size={22} />
                     <a href="mailto:danidrive555@gmail.com"><span>danidrive555@gmail.com</span></a>

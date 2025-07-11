@@ -45,12 +45,12 @@ const Gallery = () => {
 
 	const openViewer = (idx: number) => {
 		setSelected(idx);
-		setTimeout(() => setShowViewer(true), 10); // allow render before animating
+		setTimeout(() => setShowViewer(true), 10);
 	};
 
 	const closeViewer = () => {
 		setShowViewer(false);
-		setTimeout(() => setSelected(null), 200); // match animation duration
+		setTimeout(() => setSelected(null), 200);
 	};
 
 	return (
@@ -60,15 +60,15 @@ const Gallery = () => {
 				{images.map((img, idx) => (
 					<div
 						key={idx}
-						className={`relative overflow-hidden ${img.gridClass}`}
+						className={`relative overflow-hidden group ${img.gridClass}`}
 						onClick={() => openViewer(idx)}
 					>
 						<img
 							src={img.src}
-							className="object-cover w-full h-full cursor-pointer select-none"
+							className="object-cover w-full h-full select-none group-hover:cursor-pointer"
 							draggable="false"
 						/>
-						<div className="absolute inset-0 bg-black opacity-0 hover:opacity-40 transition-opacity duration-200" />
+						<div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-40 transition-opacity duration-200 group-hover:cursor-pointer" />
 					</div>
 				))}
 			</div>
@@ -82,7 +82,7 @@ const Gallery = () => {
 						onClick={e => e.stopPropagation()}
 					>
 						<button
-							className="absolute top-2 right-2 text-white text-3xl font-bold bg-black bg-opacity-50 px-3 py-1 hover:bg-opacity-80 transition"
+							className="absolute top-2 right-2 text-white text-3xl font-bold bg-black bg-opacity-50 px-3 py-1 hover:bg-opacity-80 transition cursor-pointer"
 							onClick={closeViewer}
 							aria-label="Затвори"
 						>
