@@ -89,7 +89,7 @@ const CategoryCard = ({ title, img, desc, children }: CategoryCardProps) => {
                 ×
               </button>
               <h2 className="text-5xl font-bold mb-8 mt-2 text-center text-white">{title}</h2>
-              <div className="text-white text-lg text-center whitespace-pre-line max-w-4xl overflow-y-auto w-full" style={{opacity: 1}}>{children}</div>
+              <div className="text-white text-lg text-center whitespace-pre-line max-w-4xl overflow-y-auto w-full" style={{ opacity: 1 }}>{children}</div>
             </div>
           </div>
         </div>
