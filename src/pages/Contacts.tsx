@@ -2,9 +2,9 @@ import { Mail, Instagram, Phone, Music2, Facebook } from 'lucide-react'
 
 const Contacts = () => {
     return (
-        <div className="courses-section m-16">
-            <h1 className="text-5xl font-bold">Контакти</h1>
-            <div style={{ width: '100%', maxWidth: 1700, height: 450, marginTop: '100px', border: '8px solid #ffffff' }} className='mx-auto'>
+        <div className="courses-section p-8 lg:p-12">
+            <h1 className="text-4xl md:text-5xl font-bold">Контакти</h1>
+            <div style={{ width: '100%', height: '50vh', marginTop: '2rem', marginBottom: '2rem', border: '8px solid #ffffff' }} className='mx-auto lg:h-[35vh]'>
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4889.653260570309!2d23.541785744014824!3d43.221962966305725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40ab193243171c8f%3A0x84950e0195a703e!2z0KPRh9C10LHQtdC9INGG0LXQvdGC0YrRgCDQlNCQ0J3QmCDQlNCg0JDQmNCSINCV0J7QntCU!5e0!3m2!1sbg!2sbg!4v1751614648251!5m2!1sbg!2sbg"
                     width="100%"
@@ -16,7 +16,7 @@ const Contacts = () => {
                     title="Google Map"
                 ></iframe>
             </div>
-            <div className="flex flex-row flex-wrap gap-6 mb-8 items-center justify-center mt-16">
+            <div className="flex flex-row flex-wrap gap-6 items-center justify-center mt-4 mb-12">
                 <div className="flex items-center gap-2 text-lg">
                     <Mail size={22} />
                     <a href="mailto:danidrive555@gmail.com"><span>danidrive555@gmail.com</span></a>

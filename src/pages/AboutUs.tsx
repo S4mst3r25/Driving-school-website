@@ -1,20 +1,20 @@
-import { motion } from "framer-motion"
-import FadeInImage from "../components/FadeInImage"
+import { motion } from "framer-motion";
+import FadeInImage from "../components/FadeInImage";
 
 const AboutUs = () => {
   return (
-    <div className="m-16">
-      <h1 className="text-5xl font-bold mb-6">За Нас</h1>
-      <div className="flex flex-row w-full h-[70vh] space-x-20">
+    <div className="p-4 md:p-8 lg:p-16">
+      <h1 className="text-4xl md:text-5xl font-bold mb-8 text-center lg:text-left">За Нас</h1>
+      <div className="flex flex-col lg:flex-row w-full lg:h-[70vh] gap-8 lg:gap-20">
         <motion.div
-          className="w-full h-full"
+          className="w-full lg:max-w-[50%] px-4 sm:px-8 lg:px-0"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0 }}
         >
-          <p className="text-lg">УЧЕБЕН ЦЕНТЪР „Дани Драйв“ ЕООД е създаден през 2019 г., в следствие продължение на дългогодишния опит  като инструктор на ръководителя на учебния център Данаил Цветанов Димитров. Той е с 20 годишен опит в обучението и подготовката на кандидат водачи за управление на моторни превозни средства. Стремежът на екипа е да подготвят всички кандидат - водачи за съвестни шофьори, които умело да прилагат и спазват  Закона за движение по пътищата.</p>
+          <p className="text-lg text-center lg:text-left">УЧЕБЕН ЦЕНТЪР „Дани Драйв" ЕООД е създаден през 2019 г., в следствие продължение на дългогодишния опит  като инструктор на ръководителя на учебния център Данаил Цветанов Димитров. Той е с 20 годишен опит в обучението и подготовката на кандидат водачи за управление на моторни превозни средства. Стремежът на екипа е да подготвят всички кандидат - водачи за съвестни шофьори, които умело да прилагат и спазват  Закона за движение по пътищата.</p>
         </motion.div>
-        <div className="flex flex-row w-full h-full gap-6">
+        <div className="flex flex-col md:flex-row w-full lg:w-1/2 gap-6 px-4 sm:px-8 lg:px-0">
           {[
             {
               name: "Данаил Димитров",
@@ -33,7 +33,7 @@ const AboutUs = () => {
             return (
               <motion.div
                 key={person.name}
-                className="relative flex flex-col items-center w-1/2 p-6 shadow-xl bg-transparent aspect-[4/5] min-w-[220px]"
+                className="relative flex flex-col items-center w-full md:w-1/2 p-4 lg:p-6 shadow-xl bg-transparent aspect-[4/5] min-w-[220px]"
                 style={{ background: 'transparent' }}
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -79,9 +79,9 @@ const AboutUs = () => {
                       </foreignObject>
                     </svg>
                   </div>
-                  <div className="flex-1 flex flex-col w-full mt-6">
-                    <h2 className="text-2xl font-bold mb-3 text-center text-white">{person.name}</h2>
-                    <p className="text-white text-center text-lg">{person.desc}</p>
+                  <div className="flex-1 flex flex-col w-full mt-4 lg:mt-6">
+                    <h2 className="text-xl lg:text-2xl font-bold mb-2 lg:mb-3 text-center text-white">{person.name}</h2>
+                    <p className="text-white text-center text-base lg:text-lg">{person.desc}</p>
                   </div>
                 </div>
               </motion.div>
@@ -90,7 +90,7 @@ const AboutUs = () => {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default AboutUs
+export default AboutUs;

@@ -107,17 +107,18 @@ const courses = [
 
 const Courses = () => {
 	return (
-		<div className="p-16">
-			<h1 className="text-5xl font-bold mb-12 md:mb-0 md:mr-12 whitespace-nowrap self-center md:self-start">
+		<div className="p-4 md:p-8 lg:p-16">
+			<h1 className="text-4xl md:text-5xl font-bold mb-8 md:mb-12 text-center lg:text-left">
 				Нашите Курсове
 			</h1>
-			<div className="flex flex-row gap-8 items-center justify-center mt-20">
+			<div className="flex flex-col lg:flex-row flex-wrap items-center justify-center mt-8 md:mt-20 w-full max-w-[1600px] mx-auto">
 				{courses.map((course, idx) => (
 					<motion.div
 						key={idx}
 						initial={{ opacity: 0, y: 30 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.5, delay: idx * 0.15 }}
+						className="w-[90%] sm:w-[80%] md:w-[70%] lg:w-1/4 xl:w-1/4 p-4"
 					>
 						<CategoryCard title={course.title} img={course.img} desc={course.desc}>
 							{course.children}

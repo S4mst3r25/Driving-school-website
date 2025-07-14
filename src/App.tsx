@@ -22,19 +22,22 @@ const SECTIONS = [
         exit={{ opacity: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <div className="hero-center-text tektur-bold">
+        <div className="hero-center-text tektur-bold px-4 text-center">
           <motion.h1
-            className="text-6xl"
+            className="text-5xl md:text-6xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
+            style={{ maxWidth: '100%', wordWrap: 'break-word', margin: '0 auto' }}
           >
             Най-престижната автошкола във Враца
           </motion.h1>
           <motion.p
+            className="text-lg md:text-xl mt-14 md:mt-18"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.7 }}
+            style={{ maxWidth: '100%', wordWrap: 'break-word', margin: '0 auto', paddingTop: '1.5rem' }}
           >
             Научете се да шофирате уверено с нашите коли BMW
           </motion.p>
